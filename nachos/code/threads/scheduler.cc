@@ -121,6 +121,8 @@ Scheduler::FindNextToRun()
         // 间隔太小，返回 NULL （避免过分频繁地调度）
         // 就绪队列为空，返回 NULL （没有就绪进程可以调度）
         // 找到优先级最高的就绪态进程t
+        if(TimeTicks-lastSwitchTick < 200)
+        return NULL;
 
         return readyList->RemoveFront();
         //end: ++++++++++++++++++++++++++++++++++++++++
