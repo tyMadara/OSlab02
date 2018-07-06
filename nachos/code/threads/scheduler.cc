@@ -86,6 +86,7 @@ void Scheduler::flushPriority() //
     for(i=0;i < readyList->Length(); i++){
         flushPriority();
     }
+    //flush finished
 }
 //end: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
