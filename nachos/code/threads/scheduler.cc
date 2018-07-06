@@ -83,6 +83,9 @@ void Scheduler::ReadyToRun(Thread *thread)
 // begin: TODO:该函数的作用是调整所有就绪线程的优先级++++++++++++++++++++
 void Scheduler::flushPriority() //
 {
+    for(i=0;i < readyList->Length(); i++){
+        flushPriority();
+    }
 }
 //end: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
