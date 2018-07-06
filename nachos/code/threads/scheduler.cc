@@ -123,6 +123,8 @@ Scheduler::FindNextToRun()
         // 找到优先级最高的就绪态进程t
         if(TimeTicks-lastSwitchTick < 200)
         return NULL;
+        if(readyList->IsEmpty())
+        return NULL;
 
         return readyList->RemoveFront();
         //end: ++++++++++++++++++++++++++++++++++++++++
