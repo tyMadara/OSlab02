@@ -125,6 +125,9 @@ Scheduler::FindNextToRun()
         return NULL;
         if(readyList->IsEmpty())
         return NULL;
+        readyList->Insert(kernel->currentThread);
+
+
 
         return readyList->RemoveFront();
         //end: ++++++++++++++++++++++++++++++++++++++++
